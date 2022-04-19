@@ -12,7 +12,7 @@ const  App = () => {
 
   useEffect(() => {
     getArticles()
-      .then(data => console.log(data.results))
+      .then(data => console.log('in app', data))
   }, []);
 
   return (
