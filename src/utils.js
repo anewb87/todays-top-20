@@ -7,8 +7,13 @@ const checkResponse = (response) => {
 }
 
 const cleanArticles = (articleInfo) => {
-  console.log('clean articles', articleInfo)
-  const cleanedData = articleInfo.results.map(article => {
+  const filteredData = articleInfo.results.filter(article => {
+    if (article.media.length > 0) {
+      return article
+    }
+  })
+
+  const cleanData = filteredData.map(article => {
     return {
       id: article.id,
       abstract: article.abstract,
@@ -17,13 +22,12 @@ const cleanArticles = (articleInfo) => {
       subsection: article.subsection,
       title: article.title,
       url: article.url,
-      media: article.media[0],
+      media: article.media[0]['media-metadata'][2].url,
       published_date: article.published_date,
     }
   })
-  console.log('cleanedData', cleanedData)
-
-  return cleanedData
+  console.log('clean', cleanData)
+  return cleanData
 }
 
 export { checkResponse, cleanArticles }
