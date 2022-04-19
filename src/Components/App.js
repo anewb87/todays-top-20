@@ -22,6 +22,8 @@ const  App = () => {
       .catch(error => setError(error) )
   }, []);
 
+  console.log('all articles', allArticles)
+
   if (isLoading) {
     return <>
       <NavBar/>
@@ -37,7 +39,7 @@ const  App = () => {
       <>
         <NavBar/>
         <Routes>
-          <Route path="/" element={<ArticlesContainer/>} />
+          <Route path="/" element={<ArticlesContainer allArticles={allArticles}/>} />
           <Route path="article/:id" element={<SingleArticle/>} />
           <Route path="*" element={<Error />} />
         </Routes>

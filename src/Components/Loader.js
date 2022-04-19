@@ -1,7 +1,6 @@
 import React from 'react';
 import '../Styling/Loader.scss';
 
-
 const Loader = () => {
   return (
     <div className='loader'>
