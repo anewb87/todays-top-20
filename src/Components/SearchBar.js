@@ -20,7 +20,6 @@ const SearchBar = ({ searchArticles }) => {
           searchArticles(searchInput);
           clearInput();
           navigate('search-results')
-
           }
         }
       >
