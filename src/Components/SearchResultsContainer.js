@@ -18,7 +18,7 @@ const SearchResultsContainer = ({ searchResults }) => {
   const determineDisplay = () => {
     if (searchResults.length === 0) {
       return (
-        <div className='no-results'>
+        <div className='results'>
           <h2>No articles found for that search. Please try again.</h2>
           <Link to='/'>
             <button className='go-home-btn'>Home</button>

@@ -8,7 +8,6 @@
 @import "./SearchBar.scss";
 @import "./SingleArticle.scss";
 
-
 body,
 html {
   height: 100%;
@@ -25,6 +24,20 @@ h2 {
   color: $darkBrown
 }
 
+button:hover,
+a:hover {
+  cursor: pointer;
+}
+
+.go-home-btn {
+  margin-top: 1%;
+}
+
+.results {
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 3%
+}
 
 // font-family: 'Bungee Shade',
 // cursive;
