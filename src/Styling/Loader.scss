@@ -1,3 +1,4 @@
+@import './variables';
 // body {
 //   display: flex;
 //   align-items: center;
@@ -16,7 +17,7 @@
     height: 50%;
     background: grey;
     transform-origin: center bottom;
-    box-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
 
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
@@ -33,7 +34,7 @@
     left: 0;
     width: 10px;
     height: 10px;
-    background: blue;
+    background: $darkBrown;
     border-radius: 50%;
     animation: ball 4s infinite;
   }

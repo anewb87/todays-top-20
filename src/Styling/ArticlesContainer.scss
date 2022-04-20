@@ -1,6 +1,8 @@
+@import './variables';
+
 .articles-container {
-  padding: 20px;
+  padding: 2em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 1em;
 }

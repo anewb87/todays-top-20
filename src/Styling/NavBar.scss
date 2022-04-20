@@ -1,0 +1,8 @@
+@import './variables';
+
+.nav-bar {
+  display: flex;
+  padding: 1.4em;
+  justify-content: space-between;
+  background-color: $darkBrown
+}

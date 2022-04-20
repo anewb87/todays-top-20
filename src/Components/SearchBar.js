@@ -1,5 +1,6 @@
 import React, { useState }from 'react';
 import { useNavigate } from 'react-router-dom'
+import '../Styling/SearchBar.scss'
 
 
 const SearchBar = ({ searchArticles }) => {
@@ -13,6 +14,7 @@ const SearchBar = ({ searchArticles }) => {
   return (
     <div>
       <form
+        aria-label='search-form'
         onSubmit={(e) => {
           e.preventDefault();
           searchArticles(searchInput);
@@ -29,7 +31,7 @@ const SearchBar = ({ searchArticles }) => {
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
         />
-        <button>Search</button>
+        <button className='search-btn'>Search</button>
       </form>
     </div>
   )

@@ -1,18 +1,25 @@
 @import "./reset";
 @import "./variables";
 @import "./App";
+@import "./NavBar.scss";
+@import "./ArticlesContainer.scss";
+@import "./SearchBar.scss";
 
 
 body,
 html {
   height: 100%;
   font-family: 'Courier Prime';
-  // color: $offWhite;
-  // background-color: $darkBrown;
+  background-color: $lightBrown;
+  color: $darkBrown;
 }
 
 h1 {
   font-family: 'Major Mono Display'
+}
+
+h2 {
+  color: $darkBrown
 }
 
 

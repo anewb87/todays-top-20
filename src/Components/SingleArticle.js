@@ -10,7 +10,6 @@ const SingleArticle = ({ allArticles }) => {
     const detailedArticle = allArticles.find(article => {
       return article.id === parseInt(id)
     })
-    console.log('detailed article', detailedArticle)
     setSingleArticle(detailedArticle)
   }, [allArticles, id])
 
