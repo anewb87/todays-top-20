@@ -12,6 +12,7 @@ const  App = () => {
   const [allArticles, setAllArticles] = useState([])
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('')
+  // const [singleArticle, setSingleArticle] = useState({})
 
   useEffect(() => {
     getArticles()
@@ -21,6 +22,11 @@ const  App = () => {
       })
       .catch(error => setError(error) )
   }, []);
+
+  // const determineSingleArticle = (id) => {
+  //   const detailedArticle = allArticles.find(article => article.id === id)
+  //   setSingleArticle(detailedArticle)
+  // }
 
   console.log('all articles', allArticles)
 
@@ -40,7 +46,7 @@ const  App = () => {
         <NavBar/>
         <Routes>
           <Route path="/" element={<ArticlesContainer allArticles={allArticles}/>} />
-          <Route path="article/:id" element={<SingleArticle/>} />
+          <Route path="article/:id" element={<SingleArticle allArticles={allArticles}/>} />
           <Route path="*" element={<Error />} />
         </Routes>
       </>
