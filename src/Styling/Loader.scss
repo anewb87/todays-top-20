@@ -1,11 +1,14 @@
 @import './variables';
-// body {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
+
+.loading {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 2em;
+}
 
 .loader {
+  margin-left: 46%;
+  margin-top: 10%;
   position: relative;
   width: 75px;
   height: 100px;
@@ -15,7 +18,7 @@
     bottom: 0;
     width: 10px;
     height: 50%;
-    background: grey;
+    background: $offWhite;
     transform-origin: center bottom;
     box-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
 
