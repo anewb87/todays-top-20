@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 
 const SingleArticle = ({ allArticles }) => {
   const [singleArticle, setSingleArticle] = useState({})
-  
   let { id } = useParams();
+  console.log('singlearticleid', id)
 
   useEffect(() => {
     const detailedArticle = allArticles.find(article => {
