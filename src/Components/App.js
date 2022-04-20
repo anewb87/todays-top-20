@@ -7,12 +7,13 @@ import ArticlesContainer from './ArticlesContainer';
 import SingleArticle from './SingleArticle';
 import Error from './Error';
 import '../Styling/App.scss'
+import SearchResultsContainer from './SearchResultsContainer';
 
 const  App = () => {
-  const [allArticles, setAllArticles] = useState([])
+  const [allArticles, setAllArticles] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('')
-  // const [singleArticle, setSingleArticle] = useState({})
 
   useEffect(() => {
     getArticles()
@@ -23,12 +24,11 @@ const  App = () => {
       .catch(error => setError(error) )
   }, []);
 
-  // const determineSingleArticle = (id) => {
-  //   const detailedArticle = allArticles.find(article => article.id === id)
-  //   setSingleArticle(detailedArticle)
-  // }
-
-  console.log('all articles', allArticles)
+  const searchArticles = (searchInput) => {
+    let input = searchInput.toLowerCase();
+    let matchedArticles = allArticles.filter(article => article.title.toLowerCase().includes(input))
+    setSearchResults(matchedArticles)
+  }
 
   if (isLoading) {
     return <>
@@ -43,11 +43,12 @@ const  App = () => {
   } else {
     return (
       <>
-        <NavBar/>
+        <NavBar searchArticles={searchArticles}/>
         <Routes>
-          <Route path="/" element={<ArticlesContainer allArticles={allArticles}/>} />
-          <Route path="article/:id" element={<SingleArticle allArticles={allArticles}/>} />
-          <Route path="*" element={<Error />} />
+          <Route path='/' element={<ArticlesContainer allArticles={allArticles}/>} />
+          <Route path='search-results' element={<SearchResultsContainer searchResults={searchResults}/>}/>
+          <Route path='article/:id' element={<SingleArticle allArticles={allArticles}/>} />
+          <Route path='*' element={<Error />} />
         </Routes>
       </>
     );
