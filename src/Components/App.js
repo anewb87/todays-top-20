@@ -7,6 +7,7 @@ import ArticlesContainer from './ArticlesContainer';
 import SingleArticle from './SingleArticle';
 import Error from './Error';
 import '../Styling/App.scss'
+import SearchResultsContainer from './SearchResultsContainer';
 
 const  App = () => {
   const [allArticles, setAllArticles] = useState([]);
@@ -23,15 +24,11 @@ const  App = () => {
       .catch(error => setError(error) )
   }, []);
 
-  console.log('all articles', allArticles)
-
-
   const searchArticles = (searchInput) => {
     let input = searchInput.toLowerCase();
     let matchedArticles = allArticles.filter(article => article.title.toLowerCase().includes(input))
     setSearchResults(matchedArticles)
   }
-
 
   if (isLoading) {
     return <>
@@ -48,9 +45,10 @@ const  App = () => {
       <>
         <NavBar searchArticles={searchArticles}/>
         <Routes>
-          <Route path="/" element={<ArticlesContainer allArticles={allArticles} searchResults={searchResults}/>} />
-          <Route path="article/:id" element={<SingleArticle allArticles={allArticles}/>} />
-          <Route path="*" element={<Error />} />
+          <Route path='/' element={<ArticlesContainer allArticles={allArticles}/>} />
+          <Route path='search-results' element={<SearchResultsContainer searchResults={searchResults}/>}/>
+          <Route path='article/:id' element={<SingleArticle allArticles={allArticles}/>} />
+          <Route path='*' element={<Error />} />
         </Routes>
       </>
     );

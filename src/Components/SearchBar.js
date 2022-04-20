@@ -1,8 +1,10 @@
 import React, { useState }from 'react';
+import { useNavigate } from 'react-router-dom'
 
 
 const SearchBar = ({ searchArticles }) => {
   const [searchInput, setSearchInput] = useState('')
+  const navigate = useNavigate()
 
   const clearInput = () => {
     setSearchInput('')
@@ -13,8 +15,10 @@ const SearchBar = ({ searchArticles }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          searchArticles(searchInput)
-          clearInput()
+          searchArticles(searchInput);
+          clearInput();
+          navigate('search-results')
+
           }
         }
       >

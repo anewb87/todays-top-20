@@ -1,6 +1,5 @@
 import React from 'react';
 import ArticleCard from './ArticleCard';
-
 import '../Styling/ArticlesContainer.scss'
 
 const ArticlesContainer = ({ allArticles }) => {
