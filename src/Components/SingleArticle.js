@@ -10,23 +10,22 @@ const SingleArticle = ({ allArticles }) => {
     const detailedArticle = allArticles.find(article => {
       return article.id === parseInt(id)
     })
-    console.log('detailed article', detailedArticle)
     setSingleArticle(detailedArticle)
   }, [allArticles, id])
 
   console.log('singleArticle', singleArticle)
 
   return (
-    <section>
+    <section className='single-article'>
       <div className='article-image'>
         <img className='picture' src={singleArticle.media} alt={`Article: ${singleArticle.title}`} />
       </div>
       <div className='article-info'>
-        <h2>{singleArticle.title}</h2>
-        <p>{singleArticle.byline}</p>
-        <p>Section: {singleArticle.section}</p>
+        <h2 className='details-title'>{singleArticle.title}</h2>
+        <p className='byline'>{singleArticle.byline}</p>
+        <p>Newspaper Section: {singleArticle.section}</p>
         <p>{singleArticle.abstract}</p>
-        <a href={singleArticle.url} target='_blank'>Read the Full Article</a>
+        <a className='anchor-tag' href={singleArticle.url} target='_blank'>Read the Full Article</a>
       </div>
     </section>
   )
