@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link, useLocation, useParams } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
-const NavBar = () => {
+const NavBar = ({ searchArticles }) => {
   let { pathname } = useLocation();
   let navLink;
   let searchBar;
@@ -16,10 +17,8 @@ const NavBar = () => {
     searchBar = null;
   } else {
     navLink = null;
-    // searchBar = 
+    searchBar = <SearchBar searchArticles={searchArticles}/>
   }
-
-
 
   return (
     <header className='nav-bar'>
@@ -28,7 +27,6 @@ const NavBar = () => {
       {searchBar}
     </header>
   )
-
 }
 
 export default NavBar

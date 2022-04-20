@@ -28,14 +28,10 @@ const  App = () => {
 
   const searchArticles = (searchInput) => {
     let input = searchInput.toLowerCase();
-    let matchedArticles = allArticles.filter(article => {
-      let title = article.title.toLowerCase();
-      if(title.includes(input)) {
-        return article
-      }
-    })
+    let matchedArticles = allArticles.filter(article => article.title.toLowerCase().includes(input))
     setSearchResults(matchedArticles)
   }
+
 
   if (isLoading) {
     return <>
@@ -52,7 +48,7 @@ const  App = () => {
       <>
         <NavBar searchArticles={searchArticles}/>
         <Routes>
-          <Route path="/" element={<ArticlesContainer allArticles={allArticles}/>} />
+          <Route path="/" element={<ArticlesContainer allArticles={allArticles} searchResults={searchResults}/>} />
           <Route path="article/:id" element={<SingleArticle allArticles={allArticles}/>} />
           <Route path="*" element={<Error />} />
         </Routes>
