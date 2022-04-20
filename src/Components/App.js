@@ -9,7 +9,8 @@ import Error from './Error';
 import '../Styling/App.scss'
 
 const  App = () => {
-  const [allArticles, setAllArticles] = useState([])
+  const [allArticles, setAllArticles] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('')
 
@@ -24,6 +25,18 @@ const  App = () => {
 
   console.log('all articles', allArticles)
 
+
+  const searchArticles = (searchInput) => {
+    let input = searchInput.toLowerCase();
+    let matchedArticles = allArticles.filter(article => {
+      let title = article.title.toLowerCase();
+      if(title.includes(input)) {
+        return article
+      }
+    })
+    setSearchResults(matchedArticles)
+  }
+
   if (isLoading) {
     return <>
       <NavBar/>
@@ -37,7 +50,7 @@ const  App = () => {
   } else {
     return (
       <>
-        <NavBar/>
+        <NavBar searchArticles={searchArticles}/>
         <Routes>
           <Route path="/" element={<ArticlesContainer allArticles={allArticles}/>} />
           <Route path="article/:id" element={<SingleArticle allArticles={allArticles}/>} />
