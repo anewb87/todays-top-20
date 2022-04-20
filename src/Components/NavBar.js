@@ -7,7 +7,7 @@ const NavBar = ({ searchArticles }) => {
   let { pathname } = useLocation();
   let navLink;
   let searchBar;
-  let id = parseInt(pathname.slice(9))
+  let id = parseInt(pathname.slice(-15))
 
   const linkStyleOne = {
     textDecoration: 'none',
@@ -17,12 +17,11 @@ const NavBar = ({ searchArticles }) => {
   };
 
   const linkStyleTwo = {
-    // textDecoration: 'none',
     color: 'white',
     fontSize: '1.5em',
   };
 
-  if (pathname === `/article/${id}`) {
+  if (pathname === `/article/${id}` || pathname === `/search-results/article/${id}`) {
     navLink = <Link className="nav-link" style={linkStyleTwo} to='/'>Back to Home</Link>;
     searchBar = null;
   } else {

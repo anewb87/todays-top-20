@@ -46,8 +46,9 @@ const  App = () => {
         <NavBar searchArticles={searchArticles}/>
         <Routes>
           <Route path='/' element={<ArticlesContainer allArticles={allArticles}/>} />
-          <Route path='search-results' element={<SearchResultsContainer searchResults={searchResults}/>}/>
           <Route path='article/:id' element={<SingleArticle allArticles={allArticles}/>} />
+          <Route path='search-results' element={<SearchResultsContainer searchResults={searchResults}/>}/>
+          <Route path='search-results/article/:id' element={<SingleArticle allArticles={allArticles} />} />
           <Route path='*' element={<Error />} />
         </Routes>
       </>

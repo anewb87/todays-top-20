@@ -5,11 +5,9 @@ const SingleArticle = ({ allArticles }) => {
   const [singleArticle, setSingleArticle] = useState({})
   const navigate = useNavigate()
   let { id } = useParams();
-  console.log('singlearticleid', id)
-  console.log('id length', id.length)
 
   useEffect(() => {
-    if (id.length < 15) {
+    if (id.length !== 15) {
       navigate(`/*`)
     } else {
     const detailedArticle = allArticles.find(article => {
