@@ -1,0 +1,131 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2022 The New York Times Company.  All Rights Reserved.",
+  "num_results": "20",
+  "results": [
+    {
+      "uri": "nyt://article/27f49b2b-6301-5e19-a880-8fb9c1d2536a",
+      "url": "https://www.nytimes.com/2022/04/19/business/student-loans-forgiveness.html",
+      "id": "100000008310203",
+      "asset_id": "100000008310203",
+      "source": "New York Times",
+      "published_date": "2022-04-19",
+      "updated": "2022-04-20 00:30:07",
+      "section": "Business",
+      "subsection": "",
+      "nytdsection": "business",
+      "adx_keywords": "Student Loans;United States Politics and Government;Cardona, Miguel A (1975- );Education Department (US)",
+      "column": null,
+      "byline": "By Stacy Cowley",
+      "type": "Article",
+      "title": "Millions move closer to student loan forgiveness with one-time government waivers.",
+      "abstract": "A set of piecemeal fixes is intended to address longstanding administrative failures by the government’s loan servicers.",
+      "des_facet": [
+        "Student Loans",
+        "United States Politics and Government"
+      ],
+      "org_facet": [
+        "Education Department (US)"
+      ],
+      "per_facet": [
+        "Cardona, Miguel A (1975- )"
+      ],
+      "geo_facet": [],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "The Education Department will use one-time waivers and adjustments to retroactively credit millions of borrowers with additional payments toward two loan-forgiveness programs.",
+          "copyright": "Kenny Holston for The New York Times",
+          "approved_for_syndication": "1",
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/04/19/business/19student-loans/19student-loans-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": "75",
+              "width": "75"
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/04/19/business/19student-loans/merlin_205014501_b42c6418-8764-4997-8079-da40fb1e8e5f-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": "140",
+              "width": "210"
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/04/19/business/19student-loans/merlin_205014501_b42c6418-8764-4997-8079-da40fb1e8e5f-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": "293",
+              "width": "440"
+            }
+          ]
+        }
+      ],
+      "eta_id": "0"
+    },
+    {
+      "uri": "nyt://article/4a0ebb19-b64f-5ed8-978b-6f02cad2c70b",
+      "url": "https://www.nytimes.com/2022/04/18/us/politics/marjorie-taylor-greene-jan-6.html",
+      "id": "100000008298268",
+      "asset_id": "100000008298268",
+      "source": "New York Times",
+      "published_date": "2022-04-18",
+      "updated": "2022-04-20 11:49:09",
+      "section": "U.S.",
+      "subsection": "Politics",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Project: Democracy;Storming of the US Capitol (Jan, 2021);Presidential Election of 2020;Rumors and Misinformation;Elections, House of Representatives;United States Politics and Government;Decisions and Verdicts;Greene, Marjorie Taylor (1974- );Totenberg, Amy;Georgia",
+      "column": "null",
+      "byline": "By Neil Vigdor",
+      "type": "Article",
+      "title": "Effort to Remove Marjorie Taylor Greene From Ballot Can Proceed, Judge Says",
+      "abstract": "The case that Ms. Greene unsuccessfully sought to have dismissed mirrors efforts against other Republicans centered on the Jan. 6, 2021, attack on the Capitol.",
+      "des_facet": [
+        "Project: Democracy",
+        "Storming of the US Capitol (Jan, 2021)",
+        "Presidential Election of 2020",
+        "Rumors and Misinformation",
+        "Elections, House of Representatives",
+        "United States Politics and Government",
+        "Decisions and Verdicts"
+      ],
+      "org_facet": [],
+      "per_facet": [
+        "Greene, Marjorie Taylor (1974- )",
+        "Totenberg, Amy"
+      ],
+      "geo_facet": [
+        "Georgia"
+      ],
+      "media": [
+        {
+          "type": "image",
+          "subtype": "photo",
+          "caption": "Representative Marjorie Taylor Greene at the Save America rally last month in Michigan.",
+          "copyright": "Audra Melton for The New York Times",
+          "approved_for_syndication": "1",
+          "media-metadata": [
+            {
+              "url": "https://static01.nyt.com/images/2022/04/20/us/politics/00pol-mjt-greene/00pol-mjt-greene-thumbStandard.jpg",
+              "format": "Standard Thumbnail",
+              "height": "75",
+              "width": "75"
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/04/20/us/politics/00pol-mjt-greene/00pol-mjt-greene-mediumThreeByTwo210.jpg",
+              "format": "mediumThreeByTwo210",
+              "height": "140",
+              "width": "210"
+            },
+            {
+              "url": "https://static01.nyt.com/images/2022/04/20/us/politics/00pol-mjt-greene/00pol-mjt-greene-mediumThreeByTwo440.jpg",
+              "format": "mediumThreeByTwo440",
+              "height": "293",
+              "width": "440"
+            }
+          ]
+        }
+      ],
+      "eta_id": "0"
+    }
+  ]
+}
