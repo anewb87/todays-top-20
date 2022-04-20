@@ -26,7 +26,7 @@ const cleanArticles = (articleInfo) => {
       published_date: article.published_date,
     }
   })
-  console.log('clean', cleanData)
+
   return cleanData
 }
 
