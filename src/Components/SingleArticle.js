@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const SingleArticle = ({ allArticles }) => {
   const [singleArticle, setSingleArticle] = useState({})
+  const navigate = useNavigate()
   let { id } = useParams();
   console.log('singlearticleid', id)
+  console.log('id length', id.length)
 
   useEffect(() => {
+    if (id.length < 15) {
+      navigate(`/*`)
+    } else {
     const detailedArticle = allArticles.find(article => {
       return article.id === parseInt(id)
     })
     setSingleArticle(detailedArticle)
+    }
   }, [allArticles, id])
-
-  console.log('singleArticle', singleArticle)
 
   return (
     <section className='single-article'>
