@@ -6,3 +6,10 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1em;
 }
+
+@media (max-width: 1020px) {
+  .articles-container {
+    grid-template-columns: repeat(1, .5fr);
+    justify-content: center
+  }
+}

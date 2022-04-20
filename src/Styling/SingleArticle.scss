@@ -1,0 +1,50 @@
+@import './variables';
+
+.single-article {
+  display: flex;
+  background-color: $offWhite;
+}
+
+.article-image {
+  padding: 5%;
+}
+
+.article-info {
+  padding: 5% 5% 5% 0;
+  line-height: 150%;
+}
+
+.details-title {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.byline {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.anchor-tag {
+  margin-top: .5em;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (max-width: 800px) {
+  .single-article {
+    flex-direction: column;
+    // justify-content: center;
+  }
+  .article-info {
+    padding: 5%;
+  }
+
+  .article-image {
+    text-align: center;
+
+  }
+}
