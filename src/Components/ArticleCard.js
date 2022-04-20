@@ -12,7 +12,7 @@ const ArticleCard = ({ id, title, photo }) => {
     <div className='article-card'>
       <Link style={linkStyle} to={`article/${id}`}>
         <h2>{title}</h2>
-        <img className='thumbnail-pic' src={photo} alt={`Photo for article: ${title}`}/>
+        <img className='thumbnail-pic' src={photo} alt={`Article: ${title}`}/>
       </Link>
     </div>
   )
