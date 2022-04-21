@@ -20,5 +20,3 @@ const Loader = () => {
 }
 
 export default Loader
-
-//https://codepen.io/ispal/pen/mVaaJe

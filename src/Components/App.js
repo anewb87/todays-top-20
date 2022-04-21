@@ -6,8 +6,8 @@ import Loader from './Loader';
 import ArticlesContainer from './ArticlesContainer';
 import SingleArticle from './SingleArticle';
 import Error from './Error';
-import '../Styling/App.scss'
 import SearchResultsContainer from './SearchResultsContainer';
+import '../Styling/App.scss'
 
 const  App = () => {
   const [allArticles, setAllArticles] = useState([]);
