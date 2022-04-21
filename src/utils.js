@@ -1,6 +1,6 @@
 const checkResponse = (response) => {
   if (!response.ok) {
-    throw new Error(`You don't got the answers. Come back later.`)
+    throw new Error(`Extra! Extra! Read all about how that request didn't quite work.`)
   } else {
     return response.json()
   }
@@ -8,9 +8,10 @@ const checkResponse = (response) => {
 
 const cleanArticles = (articleInfo) => {
   const filteredData = articleInfo.results.filter(article => {
-    if (article.media.length > 0) {
+    if (article.media.length > 0 && article.title) {
       return article
     }
+    return filteredData
   })
 
   const cleanData = filteredData.map(article => {

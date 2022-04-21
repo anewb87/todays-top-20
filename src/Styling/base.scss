@@ -5,7 +5,6 @@
 @import "./ArticlesContainer.scss";
 @import "./Loader.scss";
 @import "./NavBar.scss";
-@import "./SearchBar.scss";
 @import "./SingleArticle.scss";
 
 body,
@@ -38,12 +37,3 @@ a:hover {
   font-size: 1.5em;
   margin-top: 3%
 }
-
-// font-family: 'Bungee Shade',
-// cursive;
-// font-family: 'Courier Prime',
-// monospace;
-// font-family: 'Major Mono Display',
-// monospace;
-// font-family: 'Righteous',
-// cursive;
