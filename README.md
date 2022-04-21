@@ -70,4 +70,4 @@ In the future, I would love to:
 For the loading animation, I would like to credit:
 - Irko Palenius and their codepen found [here](https://codepen.io/ispal/pen/mVaaJe)
 
-#### [BACK TO THE TOP!](#todays-to-20-ish)
+#### [BACK TO THE TOP!](#today's-top-20-ish)
