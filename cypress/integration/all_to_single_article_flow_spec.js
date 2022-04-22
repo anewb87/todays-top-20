@@ -1,8 +1,6 @@
 describe('Today\s Top 20-ish flow from landing page with all articles displayed to the more detailed article page', () => {
   beforeEach(() => {
-    //have not yet figured out how to intercept this properly without exposing api key
-    // const apiKey = process.env.REACT_APP_API_KEY
-    // cy.intercept('GET', `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${apiKey}`, 
+    // cy.intercept('GET', `https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=BA3uYSmRnhqmgJJRR830eno8SoaNGy9G`, 
     // { fixture: 'articles.json' }).as('getAllArticles')
 
     cy.visit('http://localhost:3000/')
@@ -18,20 +16,20 @@ describe('Today\s Top 20-ish flow from landing page with all articles displayed 
       .get('.article-card')
       .should('have.length', 20)
       .get('.article-card')
-      .first()
-      .should('have.text', 'Millions move closer to student loan forgiveness with one-time government waivers.')
+      .eq(1)
+      .should('have.text', 'CNN+ Streaming Service Will Shut Down Weeks After Its Start')
       .get('img')
       .should('have.length', 20)
-      .first()
-      .should('have.attr', 'alt', 'Article: Millions move closer to student loan forgiveness with one-time government waivers.')
+      .eq(1)
+      .should('have.attr', 'alt', 'Article: CNN+ Streaming Service Will Shut Down Weeks After Its Start')
   })
 
   it('Should be able to select an article which routes to a new page displaying details of the chosen article as well as being able to navigate to the NYT full article', () => {
     cy.get('.article-card')
-      .first()
+      .eq(1)
       .click()
       .url()
-      .should('eq', 'http://localhost:3000/article/100000008310203')
+      .should('eq', 'http://localhost:3000/article/100000008311767')
       .get('a')
       .first()
       .should('have.text', "Today's Top 20-ish")
