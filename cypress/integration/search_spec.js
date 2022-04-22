@@ -9,7 +9,7 @@ describe('Today\s Top 20-ish landing page flow', () => {
 
   it('Should be able to search for an article by words contained in the title', () => {
     cy.get('input')
-      .type('millions')
+      .type('cnn')
       .get('button')
       .click()
       .get('.article-card')
