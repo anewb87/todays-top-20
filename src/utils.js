@@ -11,7 +11,6 @@ const cleanArticles = (articleInfo) => {
     if (article.media.length > 0 && article.title) {
       return article
     }
-    return filteredData
   })
 
   const cleanData = filteredData.map(article => {
@@ -27,7 +26,6 @@ const cleanArticles = (articleInfo) => {
       published_date: article.published_date,
     }
   })
-
   return cleanData
 }
 
